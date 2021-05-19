@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  animations:
+  circular_reveal_animation: ^2.0.0
   google_fonts: ^2.1.0
 
 dev_dependencies:

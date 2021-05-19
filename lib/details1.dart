@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'main.dart';
+
 class Details1 extends StatelessWidget {
   final int _selectedIndex;
 
@@ -17,25 +19,29 @@ class Details1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(24, 8, 0, 0),
-        child: MediaQuery.removePadding(
-          removeTop: true,
-          context: context,
-          child: ListView(
-            children: <Widget>[
-              Text(
-                "Favorites",
-                style: GoogleFonts.roboto(
-                  fontSize: 50,
-                  letterSpacing: 1.5,
+      child: FadeTransition(
+        
+        opacity: animation,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(24, 8, 0, 0),
+          child: MediaQuery.removePadding(
+            removeTop: true,
+            context: context,
+            child: ListView(
+              children: <Widget>[
+                Text(
+                  "Favorites",
+                  style: GoogleFonts.roboto(
+                    fontSize: 50,
+                    letterSpacing: 1.5,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 24,
-              ),
-              for (var i in images2) ImageData(i),
-            ],
+                SizedBox(
+                  height: 24,
+                ),
+                for (var i in images2) ImageData(i),
+              ],
+            ),
           ),
         ),
       ),
